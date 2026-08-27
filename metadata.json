@@ -1,0 +1,6 @@
+{
+  "name": "Hành Trang Công Dân 6",
+  "description": "Ứng dụng GDCD lớp 6 Trường THCS Tân Hải chuẩn 3 bộ SGK: 10 bài học, luyện tập trắc nghiệm, tình huống, vận dụng, đăng ký học sinh (7A1-7A5), quản lý và tải danh sách lớp không giới hạn, quét và xóa học sinh ảo, in và xuất dữ liệu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
