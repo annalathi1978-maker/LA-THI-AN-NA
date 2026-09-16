@@ -209,5 +209,63 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     correctAnswer: 1,
     explanation: "Giao nộp cho cơ quan công an hoặc nhà trường là nghĩa vụ đạo đức và pháp lý của công dân tốt ('Nhặt được của rơi, trả người đánh mất').",
     practicalTip: "Người làm mất ví đang rất lo lắng, hành động của em sẽ mang lại niềm vui lớn lao cho họ!"
+  },
+  {
+    id: "p-choice-11",
+    lessonId: 11,
+    lessonTitle: "Bài 11: Quyền cơ bản của trẻ em",
+    type: "choice",
+    question: "Quyền được khai sinh, có họ tên, có quốc tịch và được chăm sóc y tế thuộc nhóm quyền nào của trẻ em?",
+    options: [
+      "A. Nhóm quyền Sống còn",
+      "B. Nhóm quyền Bảo vệ",
+      "C. Nhóm quyền Phát triển",
+      "D. Nhóm quyền Tham gia"
+    ],
+    correctAnswer: 0,
+    explanation: "Nhóm quyền Sống còn bảo đảm sự sống, dinh dưỡng, tên tuổi và y tế cho trẻ em từ khi sinh ra.",
+    practicalTip: "Mỗi trẻ em sinh ra đều xứng đáng có một cái tên đẹp và cuộc sống khỏe mạnh."
+  },
+  {
+    id: "p-tf-11",
+    lessonId: 11,
+    lessonTitle: "Bài 11: Quyền cơ bản của trẻ em",
+    type: "true_false",
+    question: "Nhận định: 'Bố mẹ có quyền tự ý mở xem trộm tin nhắn, thư riêng và nhật ký của con cái vì là người sinh ra con.'",
+    correctAnswer: false,
+    explanation: "Sai. Theo Luật Trẻ em 2016, trẻ em có quyền bất khả xâm phạm về đời sống riêng tư, bí mật thư tín và điện thoại.",
+    practicalTip: "Cha mẹ và con cái nên xây dựng sự tin tưởng và lắng nghe nhau thay vì kiểm soát lén lút."
+  },
+  {
+    id: "p-sit-12",
+    lessonId: 12,
+    lessonTitle: "Bài 12: Thực hiện quyền trẻ em",
+    type: "situation",
+    question: "Tình huống: Khi thấy một bạn nhỏ trong xóm thường xuyên bị người lớn đánh đập tàn nhẫn, em nên làm gì?",
+    options: [
+      "A. Đứng ngoài quay video để đăng mạng xã hội câu view",
+      "B. Báo ngay cho bố mẹ, thầy cô, công an phường hoặc gọi Tổng đài quốc gia 111 để can thiệp kịp thời",
+      "C. Không quan tâm vì sợ bị liên lụy",
+      "D. Cổ vũ người lớn đánh mạnh hơn"
+    ],
+    correctAnswer: 1,
+    explanation: "Báo người lớn hoặc gọi Tổng đài 111 (miễn phí 24/7) là hành động dũng cảm cứu giúp bạn nhỏ khỏi bạo lực.",
+    practicalTip: "Ghi nhớ Tổng đài bảo vệ trẻ em: 111 luôn sẵn sàng hỗ trợ mọi lúc mọi nơi."
+  },
+  {
+    id: "p-choice-12",
+    lessonId: 12,
+    lessonTitle: "Bài 12: Thực hiện quyền trẻ em",
+    type: "choice",
+    question: "Trách nhiệm của học sinh trong việc thực hiện quyền trẻ em là gì?",
+    options: [
+      "A. Chủ động học tập rèn luyện và tôn trọng quyền của bạn bè",
+      "B. Chỉ đòi hỏi người khác phục vụ mình",
+      "C. Lập nhóm bắt nạt bạn bè yếu thế",
+      "D. Thờ ơ trước các hành vi xâm phạm trẻ em"
+    ],
+    correctAnswer: 0,
+    explanation: "Học sinh vừa là đối tượng hưởng quyền, vừa có bổn phận học tập tốt, rèn luyện nhân cách và tôn trọng quyền của bạn bè.",
+    practicalTip: "Tôn trọng bạn bè chính là xây dựng một môi trường lớp học hạnh phúc."
   }
 ];

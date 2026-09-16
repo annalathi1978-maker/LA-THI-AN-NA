@@ -82,7 +82,7 @@ export default function ExportPrintModal({
     playClickSound();
     let content = `
       <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
-      <head><title>Đề Cương 10 Bài Học GDCD 6</title>
+      <head><title>Đề Cương 12 Bài Học GDCD 6</title>
       <meta charset="utf-8">
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
@@ -94,8 +94,8 @@ export default function ExportPrintModal({
       </style>
       </head>
       <body>
-        <h1>TÀI LIỆU ÔN TẬP 10 BÀI HỌC GIÁO DỤC CÔNG DÂN 6</h1>
-        <p style="text-align: center;"><b>TỔNG HỢP TỪ 3 BỘ SÁCH GIÁO KHOA: CÁNH DIỀU - CHÂN TRỜI SÁNG TẠO - KẾT NỐI TRI THỨC</b></p>
+        <h1>TÀI LIỆU ÔN TẬP 12 BÀI HỌC GIÁO DỤC CÔNG DÂN 6</h1>
+        <p style="text-align: center;"><b>CHƯƠNG TRÌNH GIÁO DỤC CÔNG DÂN 6 (CHUẨN GDPT 2018)</b></p>
         <p style="text-align: center;">Học sinh: ${studentNameInput} - Lớp: ${studentClassInput}</p>
         <hr/>
     `;
@@ -105,7 +105,7 @@ export default function ExportPrintModal({
         <h2>${lesson.title}</h2>
         <p><b>Mục tiêu cốt lõi:</b> ${lesson.shortDesc}</p>
         
-        <h3>I. Tư liệu từ 3 bộ Sách Giáo Khoa:</h3>
+        <h3>I. Tư liệu và Điển tích thực tế:</h3>
         ${lesson.textbookCaseStudies.map(cs => `
           <div class="box">
             <b>[Bộ sách ${cs.bookName}] - ${cs.title}</b><br/>
@@ -189,7 +189,7 @@ export default function ExportPrintModal({
             </div>
             <div>
               <h2 className="text-lg font-extrabold">Trung Tâm In, Lưu & Xuất Dữ Liệu</h2>
-              <p className="text-xs text-slate-300">Chuẩn tài liệu 3 bộ SGK: Cánh Diều, Chân Trời Sáng Tạo, Kết Nối Tri Thức</p>
+              <p className="text-xs text-slate-300">Tài liệu học tập & bài tập ở nhà GDCD 6 chuẩn GDPT 2018</p>
             </div>
           </div>
           <button
@@ -241,7 +241,7 @@ export default function ExportPrintModal({
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[
                   { id: 'worksheet', label: 'Phiếu Bài Tập & Đề Thi', icon: FileText, desc: 'Đề kiểm tra 1 bài học' },
-                  { id: 'summary', label: 'Đề Cương 10 Bài Học', icon: BookOpen, desc: 'Tóm tắt chuẩn 3 bộ SGK' },
+                  { id: 'summary', label: 'Đề Cương 12 Bài Học', icon: BookOpen, desc: 'Tóm tắt chuẩn GDPT 2018' },
                   { id: 'certificate', label: 'Giấy Khen Công Dân Nhí', icon: Award, desc: 'Chứng nhận hoàn thành' },
                   { id: 'transcript', label: 'Bảng Điểm & Học Bạ', icon: FileSpreadsheet, desc: 'Kết quả học tập cá nhân' },
                 ].map(p => {
@@ -321,7 +321,7 @@ export default function ExportPrintModal({
                     </div>
                     <div className="text-right">
                       <p className="font-bold uppercase text-blue-900">BÀI KIỂM TRA MÔN GDCD 6</p>
-                      <p className="italic text-slate-500">Chương trình GDPT 2018 (3 Bộ SGK)</p>
+                      <p className="italic text-slate-500">Chương trình GDPT 2018</p>
                     </div>
                   </div>
 
@@ -345,7 +345,7 @@ export default function ExportPrintModal({
                           {currentLesson.title}
                         </h3>
                         <p className="text-xs italic text-slate-500">
-                          (Tư liệu tích hợp 3 bộ SGK: Cánh Diều, Chân Trời Sáng Tạo, Kết Nối Tri Thức)
+                          (Chương trình GDCD 6 chuẩn GDPT 2018)
                         </p>
                       </div>
 
@@ -581,10 +581,10 @@ export default function ExportPrintModal({
                     📘
                   </div>
                   <h4 className="text-sm font-extrabold text-slate-800">
-                    Đề Cương 10 Bài (Word .doc)
+                    Đề Cương 12 Bài (Word .doc)
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed">
-                    Xuất tài liệu ôn tập toàn bộ 10 bài học tổng hợp tư liệu từ 3 bộ sách (Cánh Diều, Chân Trời Sáng Tạo, Kết Nối Tri Thức).
+                    Xuất tài liệu ôn tập và bài tập về nhà toàn bộ 12 bài học môn GDCD 6 chuẩn GDPT 2018.
                   </p>
                   <button
                     onClick={handleExportWordGuide}
@@ -644,7 +644,7 @@ export default function ExportPrintModal({
 
         {/* Footer */}
         <div className="px-6 py-3.5 bg-slate-100 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
-          <span>Hành trang công dân 6 • Tích hợp 3 bộ SGK</span>
+          <span>Hành trang công dân 6 • Chuẩn GDPT 2018</span>
           <button
             onClick={() => {
               playClickSound();

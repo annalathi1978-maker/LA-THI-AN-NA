@@ -42,7 +42,7 @@ export const LESSONS_DATA: Lesson[] = [
       suggestedThought: "Mỗi gia đình Việt Nam đều có những giá trị đạo đức, học vấn hoặc nghề nghiệp đáng trân quý."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
           heading: "1. Khái niệm truyền thống gia đình, dòng họ",
@@ -214,7 +214,7 @@ export const LESSONS_DATA: Lesson[] = [
       suggestedThought: "Tình yêu thương sưởi ấm tâm hồn, xua tan cô đơn và tiếp thêm niềm tin trong cuộc sống."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
           heading: "1. Thế nào là yêu thương con người?",
@@ -386,7 +386,7 @@ export const LESSONS_DATA: Lesson[] = [
       suggestedThought: "Mọi thành tựu lớn lao đều bắt đầu từ những giờ phút nỗ lực không ngừng nghỉ mỗi ngày."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
           heading: "1. Siêng năng, kiên trì là gì?",
@@ -557,7 +557,7 @@ export const LESSONS_DATA: Lesson[] = [
       suggestedThought: "Sự thật luôn là nền tảng của niềm tin và sự tôn trọng giữa người với người."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
           heading: "1. Thế nào là tôn trọng sự thật?",
@@ -728,7 +728,7 @@ export const LESSONS_DATA: Lesson[] = [
       suggestedThought: "Tự lập là bước đầu tiên để một học sinh trưởng thành và làm chủ tương lai."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
           heading: "1. Khái niệm tự lập",
@@ -900,7 +900,7 @@ export const LESSONS_DATA: Lesson[] = [
       suggestedThought: "Hiểu mình là khởi đầu của mọi trí tuệ và sự thành công trong cuộc đời."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
           heading: "1. Tự nhận thức bản thân là gì?",
@@ -1072,7 +1072,7 @@ export const LESSONS_DATA: Lesson[] = [
       suggestedThought: "Chọn vị trí (C) - mái hiên nhà kiên cố; tuyệt đối không đứng dưới gốc cây to hay lều bạt giữa cánh đồng trống vì nguy cơ bị sét đánh rất cao."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
           heading: "1. Nhận diện các tình huống nguy hiểm",
@@ -1244,7 +1244,7 @@ export const LESSONS_DATA: Lesson[] = [
       suggestedThought: "Biết trân trọng mồ hôi nước mắt của cha mẹ là biểu hiện của người con hiếu thảo."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
           heading: "1. Khái niệm tiết kiệm",
@@ -1416,7 +1416,7 @@ export const LESSONS_DATA: Lesson[] = [
       suggestedThought: "Quốc tịch là mối quan hệ pháp lý thiêng liêng giữa Nhà nước và công dân."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
           heading: "1. Khái niệm công dân và quốc tịch",
@@ -1550,105 +1550,106 @@ export const LESSONS_DATA: Lesson[] = [
   },
   {
     id: 10,
-    title: "Bài 10: Quyền, nghĩa vụ cơ bản của công dân và Quyền trẻ em",
+    title: "Bài 10: Quyền và nghĩa vụ cơ bản của công dân",
     order: 10,
-    shortDesc: "Hiểu rõ các quyền Hiến định, nghĩa vụ công dân và 4 nhóm quyền cơ bản của trẻ em.",
-    icon: "📜",
+    shortDesc: "Tìm hiểu quyền chính trị, dân sự, kinh tế, văn hóa - xã hội và các nghĩa vụ cơ bản theo Hiến pháp 2013.",
+    icon: "⚖️",
     badgeColor: "bg-indigo-100 text-indigo-800 border-indigo-300",
-    bgColor: "from-indigo-500/10 to-purple-500/10",
+    bgColor: "from-indigo-500/10 to-blue-500/10",
     textbookCaseStudies: [
+      {
+        bookName: "Kết Nối Tri Thức",
+        bookColor: "bg-emerald-600 text-white",
+        title: "Quyền và nghĩa vụ cơ bản của công dân theo Hiến pháp năm 2013",
+        content: "Hiến pháp 2013 (Chương II) quy định các quyền bất khả xâm phạm về thân thể, danh dự, nhân phẩm, bí mật thư tín, tự do cư trú, quyền học tập, quyền tự do kinh doanh. Cùng với quyền lợi là các nghĩa vụ: trung thành với Tổ quốc, nghĩa vụ quân sự bảo vệ Tổ quốc, tuân theo pháp luật, nghĩa vụ nộp thuế và bảo vệ môi trường.",
+        lessonTakeaway: "Quyền công dân không tách rời nghĩa vụ của công dân. Thực hiện quyền của mình phải tôn trọng quyền của người khác.",
+        characterOrEvent: "Hiến pháp nước CHXHCN Việt Nam năm 2013 (Chương II)"
+      },
       {
         bookName: "Cánh Diều",
         bookColor: "bg-orange-500 text-white",
-        title: "Quyền & nghĩa vụ theo Hiến pháp 2013 và 4 nhóm quyền trẻ em",
-        content: "Hiến pháp 2013 quy định: Quyền bất khả xâm phạm về thân thể, danh dự, chỗ ở, thư tín (Điều 20, 21, 22); Quyền bầu cử (18 tuổi), ứng cử (21 tuổi); Quyền tự do kinh doanh, học tập. Luật Trẻ em 2016 quy định 4 nhóm quyền: Sống còn, Bảo vệ, Phát triển, Tham gia và các bổn phận của trẻ em đối với gia đình, nhà trường, xã hội.",
-        lessonTakeaway: "Quyền công dân không tách rời nghĩa vụ của công dân. Trẻ em có quyền được yêu thương và có bổn phận hiếu thảo.",
-        characterOrEvent: "Hiến pháp 2013 (Chương II) & 4 nhóm quyền Luật Trẻ em 2016"
+        title: "Tấm gương khởi nghiệp của chị Thanh và nghĩa vụ nộp thuế",
+        content: "Chị Thanh du học nông nghiệp trở về quê hương thành lập công ty rau sạch. Chị thực hiện quyền tự do kinh doanh, tạo việc làm cho bà con, đồng thời luôn nghiêm túc kê khai và nộp thuế đầy đủ cho Nhà nước, tích cực bảo vệ môi trường sinh thái.",
+        lessonTakeaway: "Hưởng quyền tự do kinh doanh luôn gắn chặt với trách nhiệm đóng góp nghĩa vụ thuế cho ngân sách quốc gia.",
+        characterOrEvent: "Doanh nhân trẻ khởi nghiệp nông nghiệp sạch"
       },
       {
         bookName: "Chân Trời Sáng Tạo",
         bookColor: "bg-sky-500 text-white",
-        title: "Chị Thanh du học Nhật về khởi nghiệp & Làng Hòa Bình nuôi dưỡng trẻ em",
-        content: "Chị Thanh du học nông nghiệp tại Nhật Bản trở về quê hương khởi nghiệp mô hình rau sạch, thực hiện quyền tự do kinh doanh và nghĩa vụ đóng thuế, bảo vệ môi trường. Làng Hòa Bình (Bệnh viện Từ Dũ) cưu mang nuôi dưỡng trẻ em nhiễm chất độc da cam, đảm bảo quyền sống còn và chăm sóc y tế tốt nhất.",
-        lessonTakeaway: "Thực hiện quyền tự do phải đi đôi với trách nhiệm công dân và tinh thần sẻ chia bảo vệ trẻ em.",
-        characterOrEvent: "Chị Thanh khởi nghiệp nông nghiệp sạch & Làng Hòa Bình Từ Dũ"
-      },
-      {
-        bookName: "Kết Nối Tri Thức",
-        bookColor: "bg-emerald-600 text-white",
-        title: "Bức thư xin không thả bóng bay ngày khai giảng & Bổn phận 5 điều Bác Hồ dạy",
-        content: "Năm học 2018-2019, một bạn học sinh lớp 6 ở Hà Nội đã dũng cảm viết thư gửi thầy Hiệu trưởng đề nghị không thả bóng bay trong lễ khai giảng để bảo vệ loài rùa biển và môi trường sinh thái. Bức thư thể hiện xuất sắc Quyền tham gia của trẻ em trong việc đóng góp ý kiến vì cộng đồng.",
-        lessonTakeaway: "Trẻ em có quyền bày tỏ ý kiến, nguyện vọng và được người lớn tôn trọng, lắng nghe.",
-        characterOrEvent: "Bức thư của bạn nhỏ xin dừng thả bóng bay bảo vệ môi trường"
+        title: "Bạn Minh khuyên bạn không xâm phạm bí mật thư tín của người khác",
+        content: "Khi thấy Phương tò mò định bóc trộm thư riêng của bạn trong lớp, Minh đã kiên quyết can ngăn và giải thích rằng thư tín, điện thoại cá nhân là quyền bí mật đời tư được pháp luật bảo vệ tuyệt đối.",
+        lessonTakeaway: "Tôn trọng quyền riêng tư của bạn bè là nếp sống văn minh và tuân thủ pháp luật.",
+        characterOrEvent: "Bạn Minh bảo vệ bí mật thư tín cá nhân"
       }
     ],
     intro: {
-      title: "Khởi động: Bức thư lay động dư luận của học sinh lớp 6",
-      scenario: "Bức thư gửi ban giám hiệu trường đề xuất dừng thả bóng bay cao su ngày khai giảng đã lan tỏa thông điệp bảo vệ động vật biển và rác thải nhựa khắp cả nước.",
-      question: "Theo em, bạn học sinh đó đã thực hiện nhóm quyền nào của trẻ em? Học sinh lớp 6 có quyền đóng góp ý kiến cho nhà trường không?",
-      suggestedThought: "Đó là quyền tham gia và quyền được sống trong môi trường trong lành được pháp luật bảo vệ."
+      title: "Khởi động: Học sinh lớp 6 có được đi xe đạp điện không?",
+      scenario: "Lớp 6A có một số bạn nhà xa nên thường đi xe đạp điện đến trường. Trong đó có bạn không đội mũ bảo hiểm khi tham gia giao thông.",
+      question: "Theo em, học sinh lớp 6 có được sử dụng xe đạp điện không? Người điều khiển xe đạp điện có bắt buộc phải đội mũ bảo hiểm không? Vì sao?",
+      suggestedThought: "Học sinh lớp 6 được đi xe đạp điện nhưng bắt buộc phải đội mũ bảo hiểm đạt chuẩn để bảo đảm an toàn tính mạng và tuân thủ Luật Giao thông đường bộ."
     },
     knowledge: {
-      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn 3 bộ SGK)",
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
       keyPoints: [
         {
-          heading: "1. Quyền và nghĩa vụ cơ bản của công dân (Hiến pháp 2013)",
-          content: "- Quyền chính trị: Quyền bầu cử (từ đủ 18 tuổi), ứng cử (từ đủ 21 tuổi), tham gia quản lý nhà nước.\n- Quyền dân sự: Quyền sống, bất khả xâm phạm thân thể, danh dự, nhân phẩm, bí mật thư tín, tự do cư trú.\n- Quyền kinh tế: Tự do kinh doanh, sở hữu tài sản hợp pháp.\n- Quyền văn hóa - xã hội: Quyền học tập, nghiên cứu khoa học, chăm sóc sức khỏe.\n- Nghĩa vụ cơ bản: Trung thành với Tổ quốc, bảo vệ Tổ quốc (nghĩa vụ quân sự), tuân theo Hiến pháp và pháp luật, nộp thuế, bảo vệ môi trường.",
-          example: "Chị Thanh thực hiện quyền kinh doanh và nghĩa vụ nộp thuế đầy đủ.",
+          heading: "1. Các nhóm quyền cơ bản của công dân (Hiến pháp 2013)",
+          content: "- Nhóm quyền chính trị: Quyền bầu cử (từ đủ 18 tuổi), ứng cử (từ đủ 21 tuổi), tham gia quản lý nhà nước và xã hội (Điều 27, 28).\n- Nhóm quyền dân sự: Quyền sống (Điều 19); quyền bất khả xâm phạm về thân thể, danh dự, nhân phẩm (Điều 20); quyền bí mật đời tư, thư tín (Điều 21); quyền bất khả xâm phạm về chỗ ở (Điều 22); quyền tự do đi lại và cư trú (Điều 23).\n- Nhóm quyền kinh tế: Quyền tự do kinh doanh các ngành nghề pháp luật không cấm (Điều 33); quyền sở hữu thu nhập hợp pháp, của cải để dành, nhà ở (Điều 32).\n- Nhóm quyền văn hóa - xã hội: Quyền học tập (Điều 39); quyền nghiên cứu khoa học, sáng tạo văn học nghệ thuật (Điều 40); quyền được bảo vệ và chăm sóc sức khỏe (Điều 38).",
+          example: "Người dân được tự do học tập, khám chữa bệnh và tự do kinh doanh đúng luật.",
           icon: "🏛️"
         },
         {
-          heading: "2. Bốn nhóm quyền cơ bản của trẻ em (Luật Trẻ em 2016)",
-          content: "1. Nhóm quyền Sống còn: Quyền được sống, khai sinh, chăm sóc sức khỏe, nuôi dưỡng.\n2. Nhóm quyền Bảo vệ: Được bảo vệ khỏi bạo lực, bóc lột sức lao động, xâm hại tình dục, bỏ rơi.\n3. Nhóm quyền Phát triển: Được học tập, vui chơi giải trí, phát triển năng khiếu nghệ thuật, tiếp cận thông tin.\n4. Nhóm quyền Tham gia: Được bày tỏ ý kiến, nguyện vọng về các vấn đề liên quan đến trẻ em.",
-          example: "Bức thư đề xuất không thả bóng bay là biểu hiện tuyệt vời của Quyền tham gia.",
-          icon: "👶"
+          heading: "2. Các nghĩa vụ cơ bản của công dân",
+          content: "- Nghĩa vụ trung thành với Tổ quốc (Điều 44).\n- Nghĩa vụ bảo vệ Tổ quốc, thực hiện nghĩa vụ quân sự (Điều 45).\n- Nghĩa vụ tuân theo Hiến pháp và pháp luật, chấp hành quy tắc sinh hoạt công cộng (Điều 46).\n- Nghĩa vụ nộp thuế theo luật định (Điều 47).\n- Nghĩa vụ bảo vệ môi trường (Điều 43); nghĩa vụ học tập đối với học sinh (Điều 39).",
+          example: "Thanh niên đủ tuổi hăng hái lên đường nhập ngũ; doanh nghiệp nộp thuế đầy đủ.",
+          icon: "🛡️"
         },
         {
-          heading: "3. Bổn phận của trẻ em",
-          content: "- Đối với gia đình: Kính trọng, hiếu thảo với ông bà cha mẹ, giúp đỡ việc nhà.\n- Đối với nhà trường: Tôn trọng thầy cô giáo, chăm chỉ học tập, chấp hành nội quy.\n- Đối với xã hội: Tôn trọng người lớn tuổi, yêu quê hương đất nước, bảo vệ môi trường.\n- Đối với bản thân: Sống trung thực, khiêm tốn, giữ gìn vệ sinh, không vướng vào tệ nạn xã hội.",
-          example: "Thực hiện tốt 5 điều Bác Hồ dạy thiếu niên, nhi đồng.",
-          icon: "⭐"
+          heading: "3. Mối quan hệ giữa quyền và nghĩa vụ công dân",
+          content: "- Quyền công dân không tách rời nghĩa vụ công dân.\n- Công dân được hưởng các quyền thì phải thực hiện đầy đủ các nghĩa vụ do Nhà nước quy định.\n- Việc thực hiện quyền công dân không được xâm phạm lợi ích quốc gia, dân tộc và quyền, lợi ích hợp pháp của người khác.\n- Mọi công dân đều bình đẳng trước pháp luật, không ai bị phân biệt đối xử.",
+          example: "Bạn Bình vứt vỏ hộp sữa bừa bãi là chưa thực hiện đúng nghĩa vụ bảo vệ môi trường học đường.",
+          icon: "⚖️"
         }
       ]
     },
     summary: [
-      "Quyền công dân luôn gắn liền với nghĩa vụ công dân theo Hiến pháp 2013.",
-      "4 nhóm quyền cơ bản của trẻ em: Sống còn, Bảo vệ, Phát triển, Tham gia (Luật Trẻ em 2016).",
-      "Gia đình, nhà trường và toàn xã hội có trách nhiệm bảo đảm cho trẻ em được hưởng trọn vẹn các quyền.",
-      "Trẻ em phải thực hiện tốt bổn phận của mình đối với gia đình, nhà trường, xã hội và chính bản thân."
+      "Quyền cơ bản của công dân gồm 4 nhóm: Chính trị, Dân sự, Kinh tế và Văn hóa - Xã hội.",
+      "Nghĩa vụ cơ bản của công dân: Trung thành Tổ quốc, bảo vệ Tổ quốc, tuân theo pháp luật, nộp thuế, bảo vệ môi trường.",
+      "Quyền công dân luôn gắn liền và không tách rời nghĩa vụ công dân theo Hiến pháp 2013.",
+      "Học sinh lớp 6 có quyền học tập, vui chơi và có nghĩa vụ chăm ngoan, giữ gìn vệ sinh, tuân thủ nội quy trường lớp."
     ],
     mindmap: {
-      centerTitle: "Quyền, nghĩa vụ công dân & Quyền trẻ em",
+      centerTitle: "Quyền và nghĩa vụ cơ bản của công dân",
       nodes: [
         {
           id: "m10-1",
-          label: "Hiến pháp 2013",
+          label: "Nhóm Quyền cơ bản",
           color: "border-indigo-400 bg-indigo-50 text-indigo-900",
           children: [
-            { id: "c10-1", label: "Quyền chính trị, dân sự, kinh tế, văn hóa" },
-            { id: "c10-2", label: "Nghĩa vụ: Trung thành Tổ quốc, nộp thuế, bảo vệ môi trường" },
-            { id: "c10-3", label: "Mọi người đều bình đẳng trước pháp luật" }
+            { id: "c10-1", label: "Quyền chính trị: Bầu cử, ứng cử, đóng góp ý kiến" },
+            { id: "c10-2", label: "Quyền dân sự: Tính mạng, danh dự, chỗ ở, thư tín" },
+            { id: "c10-3", label: "Quyền kinh tế: Tự do kinh doanh, sở hữu tài sản" },
+            { id: "c10-4", label: "Quyền văn hóa - xã hội: Học tập, khám chữa bệnh" }
           ]
         },
         {
           id: "m10-2",
-          label: "4 Nhóm quyền trẻ em",
-          color: "border-blue-400 bg-blue-50 text-blue-900",
+          label: "Nhóm Nghĩa vụ cơ bản",
+          color: "border-red-400 bg-red-50 text-red-900",
           children: [
-            { id: "c10-4", label: "1. Quyền Sống còn (khai sinh, y tế, dinh dưỡng)" },
-            { id: "c10-5", label: "2. Quyền Bảo vệ (chống bạo lực, bóc lột, xâm hại)" },
-            { id: "c10-6", label: "3. Quyền Phát triển (học tập, vui chơi, nghệ thuật)" },
-            { id: "c10-7", label: "4. Quyền Tham gia (bày tỏ ý kiến, đối thoại)" }
+            { id: "c10-5", label: "Trung thành và bảo vệ Tổ quốc Việt Nam" },
+            { id: "c10-6", label: "Tuân theo Hiến pháp và pháp luật" },
+            { id: "c10-7", label: "Nộp thuế đầy đủ theo quy định" },
+            { id: "c10-8", label: "Bảo vệ môi trường và cảnh quan chung" }
           ]
         },
         {
           id: "m10-3",
-          label: "Bổn phận trẻ em",
+          label: "Nguyên tắc thực hiện",
           color: "border-emerald-400 bg-emerald-50 text-emerald-900",
           children: [
-            { id: "c10-8", label: "Với gia đình: Hiếu thảo, vâng lời ông bà cha mẹ" },
-            { id: "c10-9", label: "Với trường lớp: Tôn sư trọng đạo, chấp hành nội quy" },
-            { id: "c10-10", label: "Với bản thân: Trung thực, chăm rèn luyện thân thể" }
+            { id: "c10-9", label: "Quyền không tách rời nghĩa vụ" },
+            { id: "c10-10", label: "Bình đẳng trước pháp luật, không đặc quyền" },
+            { id: "c10-11", label: "Không xâm phạm quyền của người khác" }
           ]
         }
       ]
@@ -1656,68 +1657,422 @@ export const LESSONS_DATA: Lesson[] = [
     quiz: [
       {
         id: "q10-1",
-        question: "Luật Trẻ em năm 2016 quy định quyền cơ bản của trẻ em được phân chia thành mấy nhóm quyền?",
+        question: "Theo Hiến pháp 2013, công dân nước CHXHCN Việt Nam đủ bao nhiêu tuổi thì có quyền bầu cử Quốc hội và Hội đồng nhân dân?",
         options: [
-          "A. 2 nhóm quyền",
-          "B. 3 nhóm quyền",
-          "C. 4 nhóm quyền (Sống còn, Bảo vệ, Phát triển, Tham gia)",
-          "D. 6 nhóm quyền"
+          "A. Đủ 16 tuổi trở lên",
+          "B. Đủ 18 tuổi trở lên",
+          "C. Đủ 20 tuổi trở lên",
+          "D. Đủ 21 tuổi trở lên"
         ],
-        correctAnswer: 2,
-        explanation: "Luật Trẻ em 2016 và Công ước LHQ 1989 phân chia thành 4 nhóm quyền cơ bản: Sống còn, Bảo vệ, Phát triển và Tham gia.",
-        sourceBook: "Cánh Diều"
+        correctAnswer: 1,
+        explanation: "Theo Điều 27 Hiến pháp 2013, công dân đủ 18 tuổi trở lên có quyền bầu cử và đủ 21 tuổi trở lên có quyền ứng cử vào Quốc hội, Hội đồng nhân dân.",
+        sourceBook: "Kết Nối Tri Thức"
       },
       {
         id: "q10-2",
-        question: "Việc một học sinh lớp 6 viết thư gửi thầy Hiệu trưởng đề xuất không thả bóng bay ngày khai giảng để bảo vệ môi trường thể hiện nhóm quyền nào?",
+        question: "Hành vi nào dưới đây thể hiện việc THỰC HIỆN ĐÚNG nghĩa vụ cơ bản của công dân?",
         options: [
-          "A. Nhóm quyền Tham gia (được bày tỏ ý kiến, nguyện vọng về các vấn đề xã hội)",
-          "B. Nhóm quyền Sống còn",
-          "C. Quyền sở hữu tài sản",
-          "D. Quyền tự do kinh doanh"
+          "A. Trốn tránh khám tuyển nghĩa vụ quân sự khi đến tuổi gọi",
+          "B. Tự giác kê khai và nộp thuế thu nhập đầy đủ, đúng hạn",
+          "C. Xả rác thải sinh hoạt bừa bãi xuống lòng sông",
+          "D. Bóc trộm thư riêng và xem lén tin nhắn điện thoại của bạn bè"
         ],
-        correctAnswer: 0,
-        explanation: "Bày tỏ ý kiến, đề xuất giải pháp bảo vệ môi trường với nhà trường là biểu hiện tiêu biểu của Quyền tham gia của trẻ em.",
+        correctAnswer: 1,
+        explanation: "Tự giác kê khai và nộp thuế là nghĩa vụ cơ bản thiêng liêng của công dân đối với ngân sách Nhà nước theo Điều 47 Hiến pháp 2013.",
         sourceBook: "Kết Nối Tri Thức"
       },
       {
         id: "q10-3",
-        question: "Hành vi nào dưới đây là XÂM PHẠM quyền trẻ em?",
+        question: "Quyền bất khả xâm phạm về thân thể của công dân có nghĩa là gì?",
         options: [
-          "A. Tổ chức tiêm chủng phòng dịch bệnh miễn phí cho trẻ em",
-          "B. Bắt trẻ em nghỉ học sớm để đi bán vé số hoặc lao động nặng nhọc kiếm tiền",
-          "C. Tổ chức Tết Trung thu và ngày Quốc tế Thiếu nhi 1/6 cho các cháu",
-          "D. Dạy bơi miễn phí cho học sinh vùng lũ"
+          "A. Không ai bị bắt nếu không có quyết định của Tòa án hoặc phê chuẩn của Viện kiểm sát (trừ trường hợp phạm tội quả tang)",
+          "B. Thích đánh người khác lúc nào cũng được nếu mình mạnh hơn",
+          "C. Công an có thể bắt bất cứ ai mà không cần lệnh",
+          "D. Bạn bè có quyền trêu chọc làm tổn hại sức khỏe của nhau"
         ],
-        correctAnswer: 1,
-        explanation: "Bắt trẻ em bỏ học để lao động kiếm tiền là hành vi bóc lột sức lao động, xâm phạm nghiêm trọng quyền học tập và phát triển của trẻ em.",
-        sourceBook: "Chân Trời Sáng Tạo"
+        correctAnswer: 0,
+        explanation: "Theo Điều 20 Hiến pháp 2013, mọi người có quyền bất khả xâm phạm về thân thể, được pháp luật bảo hộ về sức khỏe, danh dự và nhân phẩm.",
+        sourceBook: "Kết Nối Tri Thức"
       },
       {
         id: "q10-4",
-        question: "Theo Hiến pháp 2013, công dân nước CHXHCN Việt Nam đủ bao nhiêu tuổi thì có quyền bầu cử Quốc hội và Hội đồng nhân dân?",
+        question: "Mối quan hệ giữa quyền và nghĩa vụ của công dân được Hiến pháp quy định như thế nào?",
         options: [
-          "A. Đủ 16 tuổi",
-          "B. Đủ 18 tuổi trở lên",
-          "C. Đủ 21 tuổi trở lên",
-          "D. Đủ 25 tuổi"
+          "A. Công dân chỉ cần đòi hỏi quyền lợi mà không cần làm nghĩa vụ",
+          "B. Quyền công dân không tách rời nghĩa vụ của công dân",
+          "C. Người giàu thì có nhiều quyền hơn người nghèo",
+          "D. Người lớn mới phải làm nghĩa vụ, trẻ em không có bổn phận gì"
         ],
         correctAnswer: 1,
-        explanation: "Theo Điều 27 Hiến pháp 2013, công dân đủ 18 tuổi trở lên có quyền bầu cử và đủ 21 tuổi trở lên có quyền ứng cử.",
+        explanation: "Theo Điều 15 Hiến pháp 2013, quyền công dân không tách rời nghĩa vụ công dân; việc thực hiện quyền không được xâm hại quyền của người khác.",
         sourceBook: "Cánh Diều"
       },
       {
         id: "q10-5",
-        question: "Bổn phận của trẻ em đối với gia đình bao gồm những điều nào sau đây?",
+        question: "Học sinh lớp 6 có thể thực hiện nghĩa vụ công dân của mình bằng những việc làm nào sau đây?",
         options: [
-          "A. Kính trọng, lễ phép, hiếu thảo với ông bà cha mẹ; học tập tốt và giữ gìn nền nếp gia đình",
-          "B. Đòi hỏi bố mẹ phải chu cấp mọi thứ xa xỉ theo ý muốn",
-          "C. Không cần làm việc nhà vì còn nhỏ tuổi",
-          "D. Tùy ý bỏ nhà đi chơi khi không vừa ý"
+          "A. Chăm chỉ học tập, chấp hành luật an toàn giao thông, giữ gìn vệ sinh chung nơi công cộng",
+          "B. Đi xe máy phân khối lớn kẹp ba lạng lách trên đường",
+          "C. Bỏ học đi chơi điện tử và nói tục chửi thề",
+          "D. Vẽ bậy lên bàn ghế lớp học và tường trường"
         ],
         correctAnswer: 0,
-        explanation: "Hiếu thảo, lễ phép, vâng lời và đỡ đần cha mẹ việc nhà là bổn phận thiêng liêng của mỗi người con trong gia đình.",
+        explanation: "Học tập tốt, tuân thủ pháp luật giao thông và bảo vệ môi trường trường lớp là những nghĩa vụ vừa sức, thiết thực nhất của học sinh lớp 6.",
         sourceBook: "Tổng Hợp"
+      }
+    ]
+  },
+  {
+    id: 11,
+    title: "Bài 11: Quyền cơ bản của trẻ em",
+    order: 11,
+    shortDesc: "Khám phá 4 nhóm quyền cơ bản: Sống còn, Bảo vệ, Phát triển, Tham gia theo Luật Trẻ em 2016.",
+    icon: "👶",
+    badgeColor: "bg-cyan-100 text-cyan-800 border-cyan-300",
+    bgColor: "from-cyan-500/10 to-teal-500/10",
+    textbookCaseStudies: [
+      {
+        bookName: "Kết Nối Tri Thức",
+        bookColor: "bg-emerald-600 text-white",
+        title: "Bốn nhóm quyền trẻ em theo Công ước Liên hợp quốc và Luật Trẻ em 2016",
+        content: "Ngày 20-11-1989, LHQ thông qua Công ước về quyền trẻ em. Việt Nam là quốc gia đầu tiên ở châu Á và thứ hai trên thế giới phê chuẩn công ước này. Luật Trẻ em 2016 quy định trẻ em là người dưới 16 tuổi, được hưởng 4 nhóm quyền: Sống còn, Bảo vệ, Phát triển, Tham gia.",
+        lessonTakeaway: "Trẻ em có quyền được yêu thương, chăm sóc, học tập và được lắng nghe ý kiến trong mọi vấn đề liên quan đến mình.",
+        characterOrEvent: "Công ước LHQ 1989 & Luật Trẻ em năm 2016"
+      },
+      {
+        bookName: "Chân Trời Sáng Tạo",
+        bookColor: "bg-sky-500 text-white",
+        title: "Bạn nhỏ bày tỏ nguyện vọng và tôn trọng nhật ký riêng tư",
+        content: "Bạn Quân thích đọc sách khoa học được bố mẹ tôn trọng sở thích; bạn Lan được bố mẹ lắng nghe ý kiến khi chọn trường học thêm; trong khi đó việc người lớn tự ý đọc trộm nhật ký của trẻ em là xâm phạm quyền được bảo vệ đời sống riêng tư.",
+        lessonTakeaway: "Tôn trọng quyền bảo vệ đời sống riêng tư giúp trẻ em tự tin và hình thành nhân cách lành mạnh.",
+        characterOrEvent: "Quyền bảo vệ đời sống riêng tư và bí mật thư tín của trẻ em"
+      },
+      {
+        bookName: "Cánh Diều",
+        bookColor: "bg-orange-500 text-white",
+        title: "Bảo đảm tiêm chủng y tế và giáo dục hòa nhập cho trẻ khuyết tật",
+        content: "Tất cả trẻ em sinh ra đều được tiêm vắc-xin miễn phí trong chương trình tiêm chủng mở rộng quốc gia (nhóm quyền sống còn). Các bạn nhỏ khuyết tật được học hòa nhập và hỗ trợ phương tiện học tập để phát triển tài năng (nhóm quyền phát triển).",
+        lessonTakeaway: "Xã hội luôn chung tay bảo đảm mọi trẻ em không bị bỏ lại phía sau.",
+        characterOrEvent: "Chương trình tiêm chủng mở rộng & Trường chuyên biệt cho trẻ em khuyết tật"
+      }
+    ],
+    intro: {
+      title: "Khởi động: Lắng nghe bài hát 'Quyền trẻ em'",
+      scenario: "Bài hát 'Quyền trẻ em' (nhạc sĩ Trịnh Vĩnh Thành) vang lên với ca từ tươi vui: 'Chúng em cần được sống, chúng em cần tình thương, được học hành vui chơi trong mái trường yêu dấu...'",
+      question: "Em hãy ghi lại tên các quyền của trẻ em được nhắc tới trong bài hát? Theo em, vì sao trẻ em cần được pháp luật đặc biệt bảo vệ?",
+      suggestedThought: "Trẻ em còn non nớt về thể chất, trí tuệ và kinh nghiệm sống nên cần được gia đình, xã hội quan tâm, chăm sóc và bảo vệ đặc biệt."
+    },
+    knowledge: {
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
+      keyPoints: [
+        {
+          heading: "1. Khái niệm trẻ em và 4 nhóm quyền cơ bản (Luật Trẻ em 2016)",
+          content: "Trẻ em là người dưới 16 tuổi. Quyền cơ bản của trẻ em gồm 4 nhóm:\n- Nhóm quyền SỐNG CÒN: Được sống, được khai sinh, có quốc tịch, được nuôi dưỡng và chăm sóc y tế, sức khỏe.\n- Nhóm quyền BẢO VỆ: Được bảo vệ khỏi mọi hình thức phân biệt đối xử, bạo lực, bóc lột sức lao động, xâm hại tình dục, bỏ rơi, bị can thiệp trái pháp luật vào đời sống riêng tư (nhật ký, thư từ).\n- Nhóm quyền PHÁT TRIỂN: Được học tập, vui chơi giải trí, tiếp cận thông tin lành mạnh, phát triển năng khiếu nghệ thuật, thể thao, tự do tín ngưỡng tôn giáo.\n- Nhóm quyền THAM GIA: Được bày tỏ ý kiến, nguyện vọng về những vấn đề liên quan đến trẻ em; được lắng nghe, tôn trọng và tham gia các hoạt động xã hội phù hợp lứa tuổi.",
+          example: "Được làm giấy khai sinh (Sống còn); không bị đánh đập (Bảo vệ); được đi học (Phát triển); được phát biểu ý kiến tại Đại hội Cháu ngoan Bác Hồ (Tham gia).",
+          icon: "🎈"
+        },
+        {
+          heading: "2. Ý nghĩa thiêng liêng của quyền trẻ em",
+          content: "- Quyền trẻ em là điều kiện cần thiết để trẻ em được phát triển đầy đủ, toàn diện về thể chất, trí tuệ và tinh thần.\n- Bảo đảm cho trẻ em được sống trong bầu không khí ấm áp, hạnh phúc, yêu thương, an toàn và bình đẳng.\n- Thể hiện sự tôn trọng nhân quyền và trình độ văn minh của quốc gia và nhân loại.",
+          example: "Trẻ em được chăm sóc tốt sẽ trở thành những công dân tương lai tài đức xây dựng đất nước.",
+          icon: "🌟"
+        },
+        {
+          heading: "3. Bổn phận của trẻ em",
+          content: "- Với ông bà, cha mẹ: Yêu quý, kính trọng, hiếu thảo, chăm ngoan vâng lời, đỡ đần việc nhà.\n- Với thầy cô, bạn bè: Tôn sư trọng đạo, lễ phép, đoàn kết, giúp đỡ bạn bè cùng tiến bộ.\n- Với xã hội và đất nước: Yêu quê hương đất nước, tuân thủ pháp luật, bảo vệ môi trường, giữ gìn bản sắc dân tộc.\n- Với bản thân: Sống trung thực, rèn luyện thân thể, giữ gìn vệ sinh, không sa vào các thói hư tật xấu.",
+          example: "Thực hiện tốt 5 điều Bác Hồ dạy thiếu niên, nhi đồng.",
+          icon: "⭐"
+        }
+      ]
+    },
+    summary: [
+      "Trẻ em là người dưới 16 tuổi (Luật Trẻ em 2016).",
+      "4 nhóm quyền cơ bản: Sống còn (được sống, y tế) • Bảo vệ (chống bạo lực, bóc lột) • Phát triển (học tập, vui chơi) • Tham gia (bày tỏ ý kiến).",
+      "Quyền trẻ em giúp các em lớn lên an toàn, toàn diện và hạnh phúc.",
+      "Đi đôi với quyền lợi là bổn phận hiếu thảo với cha mẹ, tôn kính thầy cô, chăm học và rèn luyện đạo đức."
+    ],
+    mindmap: {
+      centerTitle: "4 Nhóm Quyền Cơ Bản Của Trẻ Em",
+      nodes: [
+        {
+          id: "m11-1",
+          label: "1. Quyền Sống Còn",
+          color: "border-rose-400 bg-rose-50 text-rose-900",
+          children: [
+            { id: "c11-1", label: "Quyền được sống, có họ tên, khai sinh, quốc tịch" },
+            { id: "c11-2", label: "Được nuôi dưỡng, chăm sóc dinh dưỡng đầy đủ" },
+            { id: "c11-3", label: "Được khám chữa bệnh và tiêm chủng y tế" }
+          ]
+        },
+        {
+          id: "m11-2",
+          label: "2. Quyền Bảo Vệ",
+          color: "border-amber-400 bg-amber-50 text-amber-900",
+          children: [
+            { id: "c11-4", label: "Chống bạo lực, xâm hại thể xác và tinh thần" },
+            { id: "c11-5", label: "Chống bóc lột sức lao động, bắt làm việc nặng nhọc" },
+            { id: "c11-6", label: "Bảo vệ bí mật đời sống riêng tư và thư tín" }
+          ]
+        },
+        {
+          id: "m11-3",
+          label: "3. Quyền Phát Triển",
+          color: "border-blue-400 bg-blue-50 text-blue-900",
+          children: [
+            { id: "c11-7", label: "Được học tập, tiếp cận thông tin bổ ích" },
+            { id: "c11-8", label: "Được vui chơi, giải trí, thể thao" },
+            { id: "c11-9", label: "Phát triển năng khiếu nghệ thuật, sáng tạo" }
+          ]
+        },
+        {
+          id: "m11-4",
+          label: "4. Quyền Tham Gia",
+          color: "border-emerald-400 bg-emerald-50 text-emerald-900",
+          children: [
+            { id: "c11-10", label: "Bày tỏ ý kiến, nguyện vọng về việc của trẻ em" },
+            { id: "c11-11", label: "Được lắng nghe, tôn trọng và đối thoại" },
+            { id: "c11-12", label: "Tham gia các diễn đàn, hoạt động Đội TNTP" }
+          ]
+        }
+      ]
+    },
+    quiz: [
+      {
+        id: "q11-1",
+        question: "Theo Luật Trẻ em Việt Nam năm 2016, trẻ em là công dân Việt Nam dưới bao nhiêu tuổi?",
+        options: [
+          "A. Dưới 14 tuổi",
+          "B. Dưới 15 tuổi",
+          "C. Dưới 16 tuổi",
+          "D. Dưới 18 tuổi"
+        ],
+        correctAnswer: 2,
+        explanation: "Theo Điều 1 Luật Trẻ em 2016, trẻ em là người dưới 16 tuổi.",
+        sourceBook: "Kết Nối Tri Thức"
+      },
+      {
+        id: "q11-2",
+        question: "Việc trẻ em sinh ra được làm Giấy khai sinh và tiêm phòng vắc-xin y tế thuộc nhóm quyền nào?",
+        options: [
+          "A. Nhóm quyền Sống còn",
+          "B. Nhóm quyền Tham gia",
+          "C. Quyền tự do cư trú",
+          "D. Quyền tự do kinh doanh"
+        ],
+        correctAnswer: 0,
+        explanation: "Được khai sinh, có quốc tịch và chăm sóc y tế bảo đảm sự tồn tại thuộc Nhóm quyền Sống còn của trẻ em.",
+        sourceBook: "Kết Nối Tri Thức"
+      },
+      {
+        id: "q11-3",
+        question: "Hành động người lớn tự ý mở đọc trộm nhật ký hoặc tin nhắn cá nhân của trẻ em là vi phạm nhóm quyền nào?",
+        options: [
+          "A. Nhóm quyền Sống còn",
+          "B. Nhóm quyền Bảo vệ (bảo vệ bí mật đời sống riêng tư)",
+          "C. Nhóm quyền Phát triển",
+          "D. Nhóm quyền Tham gia"
+        ],
+        correctAnswer: 1,
+        explanation: "Trẻ em có quyền được bảo vệ bí mật đời sống riêng tư; không ai được can thiệp trái pháp luật vào thư tín, nhật ký của trẻ em.",
+        sourceBook: "Kết Nối Tri Thức"
+      },
+      {
+        id: "q11-4",
+        question: "Học sinh lớp 6 tham gia Diễn đàn Trẻ em hoặc viết thư đóng góp ý kiến với thầy Hiệu trưởng thể hiện nhóm quyền nào?",
+        options: [
+          "A. Nhóm quyền Tham gia",
+          "B. Nhóm quyền Sống còn",
+          "C. Quyền tài sản",
+          "D. Quyền bất khả xâm phạm thân thể"
+        ],
+        correctAnswer: 0,
+        explanation: "Được bày tỏ ý kiến, nguyện vọng và đề xuất giải pháp với nhà trường, xã hội là biểu hiện tiêu biểu của Nhóm quyền Tham gia.",
+        sourceBook: "Kết Nối Tri Thức"
+      },
+      {
+        id: "q11-5",
+        question: "Bổn phận của trẻ em đối với ông bà, cha mẹ được thể hiện qua hành vi nào sau đây?",
+        options: [
+          "A. Yêu quý, kính trọng, hiếu thảo, vâng lời dạy bảo và chủ động phụ giúp việc nhà",
+          "B. Đòi hỏi bố mẹ phải mua điện thoại đắt tiền mới chịu đi học",
+          "C. Bỏ bữa cơm gia đình để đi chơi với bạn xấu",
+          "D. Không bao giờ nói lời cảm ơn hay xin lỗi cha mẹ"
+        ],
+        correctAnswer: 0,
+        explanation: "Hiếu thảo, lễ phép, vâng lời và đỡ đần cha mẹ là bổn phận thiêng liêng hàng đầu của mỗi đứa con đối với gia đình.",
+        sourceBook: "Tổng Hợp"
+      }
+    ]
+  },
+  {
+    id: 12,
+    title: "Bài 12: Thực hiện quyền trẻ em",
+    order: 12,
+    shortDesc: "Trách nhiệm của học sinh, gia đình, nhà trường và xã hội trong việc bảo đảm thực hiện quyền trẻ em.",
+    icon: "🤝",
+    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+    bgColor: "from-emerald-500/10 to-green-500/10",
+    textbookCaseStudies: [
+      {
+        bookName: "Kết Nối Tri Thức",
+        bookColor: "bg-emerald-600 text-white",
+        title: "Bạn Long báo người lớn cứu bạn nhỏ & Tòa án xử lý nghiêm bạo hành trẻ em",
+        content: "Long nhiều lần thấy chú Hưng hàng xóm đánh đập con trai tàn nhẫn nên thương em, Long đã báo với bố để nhờ can thiệp cứu em. Cơ quan chức năng và tòa án đã khởi tố, xử phạt tù vợ chồng ông Nam vì tội bạo hành, hành hạ con nuôi Tùng, bảo vệ quyền được an toàn của trẻ em.",
+        lessonTakeaway: "Khi phát hiện hành vi bạo lực, xâm hại trẻ em, cần nhanh chóng báo cho người lớn, công an hoặc gọi Tổng đài 111 để cứu giúp kịp thời.",
+        characterOrEvent: "Bạn Long dũng cảm bảo vệ bạn nhỏ & Pháp luật nghiêm trị bạo hành trẻ em"
+      },
+      {
+        bookName: "Chân Trời Sáng Tạo",
+        bookColor: "bg-sky-500 text-white",
+        title: "Tình bạn ấm áp nâng bước bạn Hoàng ngồi xe lăn tự tin dự thi văn nghệ",
+        content: "Do phải ngồi xe lăn từ nhỏ nên Hoàng rất tự ti, ngại giao tiếp. Khi trường tổ chức hội diễn văn nghệ chào mừng 20-11, các bạn trong lớp đã động viên, khích lệ và cùng nhau chuẩn bị trang phục giúp Hoàng tự tin lên sân khấu cất cao giọng hát hay tuyệt vời.",
+        lessonTakeaway: "Nhà trường và bạn bè tạo môi trường thân thiện giúp trẻ em có hoàn cảnh đặc biệt hòa nhập và tỏa sáng năng khiếu.",
+        characterOrEvent: "Tập thể lớp động viên bạn Hoàng ngồi xe lăn tỏa sáng"
+      },
+      {
+        bookName: "Cánh Diều",
+        bookColor: "bg-orange-500 text-white",
+        title: "Bố khuyên Lan: Chưa đủ tuổi điều khiển xe máy điện",
+        content: "Lên lớp 6, Lan nằng nặc đòi bố mua xe máy điện để đi học nhưng bố giải thích: Pháp luật quy định người dưới 16 tuổi không được điều khiển xe gắn máy/xe máy điện. Lan hiểu ra và vui vẻ đi xe đạp đến trường để vừa rèn luyện sức khỏe, vừa chấp hành đúng luật.",
+        lessonTakeaway: "Thực hiện quyền của mình phải đúng độ tuổi và tuân thủ nghiêm chỉnh quy định của pháp luật.",
+        characterOrEvent: "Bố giải thích cho bạn Lan về quy định độ tuổi đi xe"
+      }
+    ],
+    intro: {
+      title: "Khởi động: Bài hát 'Dấu chấm hỏi' (Nhạc sĩ Thế Hiển)",
+      scenario: "Hình ảnh những đứa trẻ lang thang cơ nhỡ, không nơi nương tựa trong bài hát 'Dấu chấm hỏi' khiến người nghe xúc động sâu sắc.",
+      question: "Theo em, ai sẽ chịu trách nhiệm bảo đảm quyền trẻ em cho các bạn nhỏ có hoàn cảnh khó khăn ấy? Chúng ta cần làm gì để giúp đỡ các bạn?",
+      suggestedThought: "Toàn xã hội, chính quyền, nhà trường và mỗi cá nhân đều có trách nhiệm chung tay che chở, nuôi dưỡng và bảo vệ các bạn nhỏ kém may mắn."
+    },
+    knowledge: {
+      sectionTitle: "Khám phá kiến thức trọng tâm (Chuẩn GDPT 2018)",
+      keyPoints: [
+        {
+          heading: "1. Trách nhiệm của học sinh trong việc thực hiện quyền trẻ em",
+          content: "- Tích cực, chủ động thực hiện các quyền của mình để rèn luyện, học tập và phát triển bản thân.\n- Tôn trọng quyền của người khác, không bắt nạt, xúc phạm danh dự bạn bè.\n- Đồng tình, ủng hộ các hành vi thực hiện đúng quyền trẻ em; dũng cảm lên tiếng phê phán, tố giác các hành vi vi phạm, bạo lực trẻ em.\n- Ghi nhớ số điện thoại Tổng đài quốc gia bảo vệ trẻ em: 111 (miễn phí cước cuộc gọi 24/7).",
+          example: "Bạn Long báo người lớn khi thấy bạn bị bạo hành; bạn bè động viên bạn khuyết tật.",
+          icon: "🧑‍🎓"
+        },
+        {
+          heading: "2. Trách nhiệm của gia đình",
+          content: "- Khai sinh, chăm sóc, nuôi dưỡng, giáo dục và chăm sóc sức khỏe cho trẻ em.\n- Tạo điều kiện cho trẻ em được học tập, vui chơi, giải trí, phát triển năng khiếu lành mạnh.\n- Tôn trọng, lắng nghe ý kiến của con cái; quản lý và bảo vệ trẻ em khỏi các nguy cơ bị xâm hại, bạo lực, bóc lột sức lao động.",
+          example: "Cha mẹ mua bảo hiểm y tế, sắm sửa đồ dùng học tập và dành thời gian tâm sự với con.",
+          icon: "🏡"
+        },
+        {
+          heading: "3. Trách nhiệm của nhà trường và xã hội",
+          content: "- Nhà trường: Quản lý, chăm sóc sức khỏe, tổ chức dạy và học chất lượng; xây dựng môi trường học đường an toàn, thân thiện, không có bạo lực học đường.\n- Xã hội: Bảo đảm các quyền trẻ em được thực thi; xây dựng các điểm vui chơi, trường lớp, bệnh viện; xử lý nghiêm minh các tổ chức, cá nhân có hành vi xâm hại hoặc vi phạm quyền trẻ em.",
+          example: "Xã hội tổ chức giải bóng đá nhi đồng; cơ quan công an xử phạt kẻ bạo hành trẻ em.",
+          icon: "🏫"
+        }
+      ]
+    },
+    summary: [
+      "Thực hiện quyền trẻ em là trách nhiệm chung của học sinh, gia đình, nhà trường và toàn xã hội.",
+      "Học sinh cần chủ động thực hiện tốt bổn phận, tôn trọng quyền của bạn bè và dũng cảm phê phán hành vi xâm hại trẻ em.",
+      "Gia đình là tổ ấm nuôi dưỡng; nhà trường là môi trường giáo dục an toàn, bình đẳng.",
+      "Xã hội có trách nhiệm bảo vệ và xử lý nghiêm các hành vi vi phạm quyền trẻ em. Tổng đài khẩn cấp bảo vệ trẻ em: 111."
+    ],
+    mindmap: {
+      centerTitle: "Thực Hiện Quyền Trẻ Em",
+      nodes: [
+        {
+          id: "m12-1",
+          label: "1. Trách nhiệm của Học Sinh",
+          color: "border-blue-400 bg-blue-50 text-blue-900",
+          children: [
+            { id: "c12-1", label: "Chủ động học tập và phát triển bản thân" },
+            { id: "c12-2", label: "Tôn trọng quyền của bạn bè và mọi người" },
+            { id: "c12-3", label: "Dũng cảm lên tiếng trước bạo lực (Gọi 111)" }
+          ]
+        },
+        {
+          id: "m12-2",
+          label: "2. Trách nhiệm của Gia Đình",
+          color: "border-amber-400 bg-amber-50 text-amber-900",
+          children: [
+            { id: "c12-4", label: "Làm khai sinh, chăm sóc y tế và dinh dưỡng" },
+            { id: "c12-5", label: "Nuôi dạy, tạo điều kiện vui chơi, học tập" },
+            { id: "c12-6", label: "Lắng nghe, tôn trọng và bảo vệ con cái" }
+          ]
+        },
+        {
+          id: "m12-3",
+          label: "3. Nhà Trường & Xã Hội",
+          color: "border-emerald-400 bg-emerald-50 text-emerald-900",
+          children: [
+            { id: "c12-7", label: "Xây dựng trường học an toàn, thân thiện" },
+            { id: "c12-8", label: "Xử lý nghiêm minh mọi hành vi bạo lực, bóc lột" },
+            { id: "c12-9", label: "Vận hành Tổng đài bảo vệ trẻ em 111 liên tục 24/7" }
+          ]
+        }
+      ]
+    },
+    quiz: [
+      {
+        id: "q12-1",
+        question: "Số điện thoại của Tổng đài quốc gia bảo vệ trẻ em tại Việt Nam là gì?",
+        options: [
+          "A. 111",
+          "B. 113",
+          "C. 114",
+          "D. 115"
+        ],
+        correctAnswer: 0,
+        explanation: "111 là số điện thoại Tổng đài quốc gia bảo vệ trẻ em, tiếp nhận thông tin tố giác bạo lực và tư vấn bảo vệ trẻ em miễn phí 24/7.",
+        sourceBook: "Kết Nối Tri Thức"
+      },
+      {
+        id: "q12-2",
+        question: "Khi phát hiện một bạn nhỏ hàng xóm thường xuyên bị người lớn đánh đập, bạo hành dã man, em nên làm gì?",
+        options: [
+          "A. Đứng nhìn và quay clip đăng lên mạng xã hội để câu like",
+          "B. Nhanh chóng báo ngay cho bố mẹ, thầy cô, công an địa phương hoặc gọi Tổng đài 111 để cứu giúp kịp thời",
+          "C. Thờ ơ, coi như không biết vì không phải việc của nhà mình",
+          "D. Cổ vũ hành vi bạo lực đó"
+        ],
+        correctAnswer: 1,
+        explanation: "Báo ngay cho người lớn có trách nhiệm hoặc gọi Tổng đài 111 là hành động dũng cảm và đúng đắn nhất để bảo vệ an toàn tính mạng cho bạn nhỏ.",
+        sourceBook: "Kết Nối Tri Thức"
+      },
+      {
+        id: "q12-3",
+        question: "Hành vi nào dưới đây của gia đình là VI PHẠM quyền trẻ em?",
+        options: [
+          "A. Làm giấy khai sinh và đưa trẻ đi tiêm phòng đầy đủ",
+          "B. Tạo điều kiện cho con tham gia lớp học vẽ năng khiếu cuối tuần",
+          "C. Bắt con nghỉ học sớm để đi làm thuê kiếm tiền phụng dưỡng gia đình",
+          "D. Chuẩn bị góc học tập yên tĩnh, đủ ánh sáng cho con"
+        ],
+        correctAnswer: 2,
+        explanation: "Bắt trẻ em nghỉ học để đi làm kiếm tiền là hành vi bóc lột sức lao động trẻ em, xâm phạm nghiêm trọng quyền học tập và phát triển.",
+        sourceBook: "Kết Nối Tri Thức"
+      },
+      {
+        id: "q12-4",
+        question: "Học sinh lớp 6 có trách nhiệm gì trong việc xây dựng trường học hạnh phúc và an toàn?",
+        options: [
+          "A. Không bắt nạt, không cô lập bạn bè; đoàn kết, giúp đỡ bạn có hoàn cảnh khó khăn",
+          "B. Lập hội nhóm tẩy chay những bạn học yếu trong lớp",
+          "C. Đặt biệt danh xấu xí để trêu chọc bạn khuyết tật",
+          "D. Thờ ơ khi thấy bạo lực học đường xảy ra"
+        ],
+        correctAnswer: 0,
+        explanation: "Đoàn kết, không bắt nạt bạn bè và yêu thương giúp đỡ lẫn nhau là trách nhiệm đạo đức của mỗi học sinh trong nhà trường.",
+        sourceBook: "Chân Trời Sáng Tạo"
+      },
+      {
+        id: "q12-5",
+        question: "Theo quy định pháp luật, người điều khiển xe gắn máy (kể cả xe máy điện) bắt buộc phải từ đủ bao nhiêu tuổi trở lên?",
+        options: [
+          "A. Đủ 14 tuổi trở lên",
+          "B. Đủ 16 tuổi trở lên",
+          "C. Đủ 18 tuổi trở lên",
+          "D. Học sinh lớp 6 bất kỳ độ tuổi nào cũng được đi"
+        ],
+        correctAnswer: 1,
+        explanation: "Theo Luật Giao thông đường bộ, người từ đủ 16 tuổi trở lên mới được điều khiển xe gắn máy có dung tích xi lanh dưới 50cm3 hoặc xe máy điện.",
+        sourceBook: "Kết Nối Tri Thức"
       }
     ]
   }

@@ -67,7 +67,7 @@ export default function HistoryView({
               Lịch Sử & Tiến Độ Học Tập
             </h1>
             <p className="text-sm text-blue-100 max-w-2xl leading-relaxed">
-              Theo dõi chi tiết các lần làm bài kiểm tra 10 bài học, lịch sử giải quyết tình huống từ 3 bộ SGK (Cánh Diều, Chân Trời Sáng Tạo, Kết Nối Tri Thức), bài nộp tự luận và sản phẩm sáng tạo.
+              Theo dõi chi tiết các lần làm bài tập ở nhà: trắc nghiệm củng cố 10 bài học, lịch sử giải quyết tình huống thực tế, bài nộp tự luận và sản phẩm sáng tạo.
             </p>
           </div>
 
@@ -180,7 +180,7 @@ export default function HistoryView({
                 </div>
                 <div>
                   <h2 className="text-lg font-extrabold text-slate-800">
-                    Lịch Sử Kiểm Tra Trắc Nghiệm (10 Bài Học)
+                    Lịch Sử Kiểm Tra Trắc Nghiệm (12 Bài Học)
                   </h2>
                   <p className="text-xs text-slate-500">
                     Ghi nhận tất cả các lần làm bài kiểm tra nhanh 5 câu hỏi của học sinh
@@ -282,7 +282,7 @@ export default function HistoryView({
                     Tình Huống Thực Tế Đã Xử Lý Thành Công
                   </h2>
                   <p className="text-xs text-slate-500">
-                    Các bài toán ứng xử công dân từ 3 bộ sách (phòng chống bắt nạt, báo cháy 114, lòng trung thực...)
+                    Các bài toán ứng xử công dân thực tế (phòng chống bắt nạt, báo cháy 114, lòng trung thực...)
                   </p>
                 </div>
               </div>

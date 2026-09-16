@@ -1,4 +1,4 @@
-export type TabType = 'home' | 'lessons' | 'practice' | 'situations' | 'apply' | 'history' | 'achievements' | 'teacher';
+export type TabType = 'home' | 'homework' | 'history' | 'achievements' | 'teacher' | 'lessons' | 'practice' | 'situations' | 'apply';
 
 export type TextbookSeries = 'all' | 'canh_dieu' | 'chan_troi' | 'ket_noi';
 
@@ -173,6 +173,14 @@ export interface StudentProgress {
   }[];
   todayChallengeCompleted: boolean;
   lastActiveLessonId: number;
+  familyTreasureQuestCompleted?: boolean;
+  familyTreasureQuestScore?: number;
+  familyTreasureQuestCommitment?: {
+    tradition: string;
+    lessonLearned: string;
+    sevenDayAction: string;
+    completedAt: string;
+  };
 }
 
 export interface Badge {
@@ -213,4 +221,21 @@ export interface StudentRecord {
   teacherComment?: string;
   registeredAt?: string;
   isVirtual?: boolean;
+}
+
+export interface LessonUploadedExercise {
+  id: string;
+  lessonId: number; // 1 to 12
+  lessonTitle: string;
+  stageName?: string; // E.g., 'Chặng 1: Em nhận ra', 'Chặng 2: Khám phá', etc.
+  type: 'choice' | 'situation' | 'essay' | 'true_false' | 'multiselect';
+  question: string;
+  options?: string[]; // for choice (A, B, C, D) or multiselect
+  correctAnswer?: number; // index 0, 1, 2, 3
+  correctAnswers?: number[]; // indices for multiselect
+  explanation?: string;
+  sampleAnswer?: string;
+  teacherNote?: string;
+  createdAt: string;
+  uploadedBy?: string;
 }

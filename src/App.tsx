@@ -19,26 +19,28 @@ import {
   saveStoredRoster,
   calculateBadges,
   generateStudentCode,
-  isVirtualOrInvalidStudent
+  isVirtualOrInvalidStudent,
+  getAdminSessionStatus,
+  setAdminSessionStatus
 } from './utils/storage';
 
 import Navbar from './components/Navbar';
 import HomeView from './components/HomeView';
-import LessonsView from './components/LessonsView';
-import PracticeView from './components/PracticeView';
-import SituationsView from './components/SituationsView';
-import ApplyView from './components/ApplyView';
+import HomeworkView, { HomeworkSubTab } from './components/HomeworkView';
 import HistoryView from './components/HistoryView';
 import AchievementsView from './components/AchievementsView';
 import TeacherView from './components/TeacherView';
 import ExportPrintModal from './components/ExportPrintModal';
 import StudentRegisterModal from './components/StudentRegisterModal';
+import AdminAuthModal from './components/AdminAuthModal';
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState<TabType>('home');
   const [isTeacherMode, setIsTeacherMode] = useState<boolean>(false);
-  const [selectedLessonId, setSelectedLessonId] = useState<number | null>(null);
-  const [practiceLessonFilter, setPracticeLessonFilter] = useState<number | null>(null);
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState<boolean>(getAdminSessionStatus);
+  const [isAdminAuthModalOpen, setIsAdminAuthModalOpen] = useState<boolean>(false);
+  const [homeworkSubTab, setHomeworkSubTab] = useState<HomeworkSubTab>('all');
+  const [homeworkLessonFilter, setHomeworkLessonFilter] = useState<number | null>(null);
   const [isExportModalOpen, setIsExportModalOpen] = useState<boolean>(false);
   const [exportModalTab, setExportModalTab] = useState<'print' | 'save' | 'export'>('print');
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState<boolean>(false);
@@ -80,11 +82,34 @@ export default function App() {
   // Navigation handlers
   const handleNavigate = (tab: TabType, lessonId?: number) => {
     if (tab === 'lessons') {
-      setSelectedLessonId(lessonId || null);
+      setCurrentTab('homework');
+      setHomeworkLessonFilter(lessonId || null);
+      setHomeworkSubTab(lessonId === 1 ? 'quest' : 'all');
     } else if (tab === 'practice') {
-      setPracticeLessonFilter(lessonId || null);
+      setCurrentTab('homework');
+      setHomeworkLessonFilter(lessonId || null);
+      setHomeworkSubTab('practice');
+    } else if (tab === 'situations') {
+      setCurrentTab('homework');
+      setHomeworkLessonFilter(lessonId || null);
+      setHomeworkSubTab('situations');
+    } else if (tab === 'apply') {
+      setCurrentTab('homework');
+      setHomeworkLessonFilter(lessonId || null);
+      setHomeworkSubTab('apply');
+    } else if (tab === 'homework') {
+      setCurrentTab('homework');
+      if (lessonId !== undefined) {
+        setHomeworkLessonFilter(lessonId || null);
+        if (lessonId === 1) {
+          setHomeworkSubTab('quest');
+        } else {
+          setHomeworkSubTab('all');
+        }
+      }
+    } else {
+      setCurrentTab(tab);
     }
-    setCurrentTab(tab);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -235,6 +260,46 @@ export default function App() {
     }));
   };
 
+  const handleSaveFamilyTreasureQuest = (
+    score: number,
+    commitment: { tradition: string; lessonLearned: string; sevenDayAction: string; completedAt: string }
+  ) => {
+    setProgress((prev) => {
+      const updatedLessons = prev.completedLessons.includes(1)
+        ? prev.completedLessons
+        : [...prev.completedLessons, 1];
+
+      return {
+        ...prev,
+        familyTreasureQuestCompleted: true,
+        familyTreasureQuestScore: score,
+        familyTreasureQuestCommitment: commitment,
+        completedLessons: updatedLessons,
+        lastActiveLessonId: 1
+      };
+    });
+
+    if (progress.studentName) {
+      setRoster((prev) =>
+        prev.map((s) => {
+          if (
+            s.name.trim().toLowerCase() === progress.studentName?.trim().toLowerCase() &&
+            s.className === progress.studentClass
+          ) {
+            return {
+              ...s,
+              score: Math.max(s.score, 10),
+              isCompleted: true,
+              teacherComment: '🌟 Đã hoàn thành xuất sắc Phiếu học tập tương tác "Giải Mã Kho Báu Gia Đình" (Bài 1)!',
+              lastSubmitted: 'Vừa xong (Phiếu Bài 1)'
+            };
+          }
+          return s;
+        })
+      );
+    }
+  };
+
   // Teacher Handlers
   const handleAddAssignment = (newAssignment: TeacherAssignment) => {
     setAssignments((prev) => [...prev, newAssignment]);
@@ -324,6 +389,37 @@ export default function App() {
     setRoster((prev) => prev.filter((s) => s.className.toLowerCase() !== className.toLowerCase()));
   };
 
+  // Admin Authentication Handlers
+  const handleToggleTeacherMode = () => {
+    if (isTeacherMode) {
+      setIsTeacherMode(false);
+    } else {
+      if (isAdminAuthenticated) {
+        setIsTeacherMode(true);
+      } else {
+        setIsAdminAuthModalOpen(true);
+      }
+    }
+  };
+
+  const handleOpenAdminLogin = () => {
+    setIsAdminAuthModalOpen(true);
+  };
+
+  const handleAdminLoginSuccess = () => {
+    setAdminSessionStatus(true);
+    setIsAdminAuthenticated(true);
+    setIsAdminAuthModalOpen(false);
+    setIsTeacherMode(true);
+  };
+
+  const handleLockAdmin = () => {
+    setAdminSessionStatus(false);
+    setIsAdminAuthenticated(false);
+    setIsTeacherMode(false);
+    setCurrentTab('home');
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans antialiased selection:bg-amber-400 selection:text-amber-950">
       {/* Primary Navigation */}
@@ -334,16 +430,19 @@ export default function App() {
           handleNavigate(tab);
         }}
         isTeacherMode={isTeacherMode}
-        onToggleTeacherMode={() => setIsTeacherMode(!isTeacherMode)}
+        onToggleTeacherMode={handleToggleTeacherMode}
         badgesCount={unlockedBadgesCount}
         onOpenExportModal={handleOpenExportModal}
         studentProgress={progress}
         onOpenRegisterModal={() => setIsRegisterModalOpen(true)}
+        isAdminAuthenticated={isAdminAuthenticated}
+        onOpenAdminLogin={handleOpenAdminLogin}
+        onLockAdmin={handleLockAdmin}
       />
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
-        {isTeacherMode ? (
+        {isTeacherMode && isAdminAuthenticated ? (
           <TeacherView
             lessons={LESSONS_DATA}
             assignments={assignments}
@@ -357,6 +456,7 @@ export default function App() {
             onDeleteVirtualStudents={handleDeleteVirtualStudents}
             onUpdateStudent={handleUpdateStudent}
             onClearClass={handleClearClass}
+            onLockAdmin={handleLockAdmin}
           />
         ) : (
           <>
@@ -372,37 +472,17 @@ export default function App() {
               />
             )}
 
-            {currentTab === 'lessons' && (
-              <LessonsView
+            {(currentTab === 'homework' || currentTab === 'lessons' || currentTab === 'practice' || currentTab === 'situations' || currentTab === 'apply') && (
+              <HomeworkView
                 lessons={LESSONS_DATA}
-                selectedLessonId={selectedLessonId}
-                onSelectLesson={setSelectedLessonId}
-                completedLessonIds={progress.completedLessons}
-                quizScores={progress.quizScores}
-                onCompleteQuiz={handleCompleteQuiz}
-              />
-            )}
-
-            {currentTab === 'practice' && (
-              <PracticeView
-                questions={PRACTICE_QUESTIONS}
-                lessons={LESSONS_DATA}
-                initialLessonFilter={practiceLessonFilter}
-                completedQuestionIds={progress.completedPracticeQuestionIds}
-                onCompleteQuestion={handleCompletePracticeQuestion}
-              />
-            )}
-
-            {currentTab === 'situations' && (
-              <SituationsView
+                initialLessonFilter={homeworkLessonFilter}
+                initialSubTab={homeworkSubTab}
+                practiceQuestions={PRACTICE_QUESTIONS}
+                completedPracticeQuestionIds={progress.completedPracticeQuestionIds}
+                onCompletePracticeQuestion={handleCompletePracticeQuestion}
                 situations={SITUATIONS_DATA}
                 solvedSituationIds={progress.solvedSituationIds}
                 onSolveSituation={handleSolveSituation}
-              />
-            )}
-
-            {currentTab === 'apply' && (
-              <ApplyView
                 thoughtTasks={APPLY_THOUGHT_TASKS}
                 actionTasks={APPLY_ACTION_TASKS}
                 creativeTasks={APPLY_CREATIVE_TASKS}
@@ -410,6 +490,8 @@ export default function App() {
                 onSaveThoughtAnswer={handleSaveThoughtAnswer}
                 onToggleActionTask={handleToggleActionTask}
                 onSubmitCreative={handleSubmitCreative}
+                onSaveQuestProgress={handleSaveFamilyTreasureQuest}
+                onOpenExportModal={handleOpenExportModal}
               />
             )}
 
@@ -450,6 +532,13 @@ export default function App() {
         onRestoreProgress={handleRestoreProgress}
       />
 
+      {/* Admin Authentication Modal (Cô An Na - Anna1978) */}
+      <AdminAuthModal
+        isOpen={isAdminAuthModalOpen}
+        onClose={() => setIsAdminAuthModalOpen(false)}
+        onSuccess={handleAdminLoginSuccess}
+      />
+
       {/* Footer */}
       <footer className="bg-white border-t border-slate-200 py-6 sm:py-8 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
@@ -463,15 +552,15 @@ export default function App() {
               onClick={() => handleOpenExportModal('print')}
               className="text-blue-600 hover:underline font-bold"
             >
-              In Phiếu Học Tập & Đề Thi
+              In Phiếu Bài Tập Ở Nhà
             </button>
             <button
               onClick={() => handleOpenExportModal('export')}
               className="text-purple-600 hover:underline font-bold"
             >
-              Xuất File Đề Cương 10 Bài
+              Xuất File Bài Tập 12 Bài
             </button>
-            <span>• Chuẩn 3 Bộ SGK 2018</span>
+            <span>• Chuẩn GDPT 2018</span>
           </div>
         </div>
       </footer>

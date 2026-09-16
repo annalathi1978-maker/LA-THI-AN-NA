@@ -71,54 +71,20 @@ export default function HomeView({
         </div>
       </section>
 
-      {/* Thông báo từ Giáo viên nếu có */}
-      {latestAssignment && (
-        <div className="p-4 sm:p-5 rounded-2xl bg-purple-50 border-2 border-purple-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xs animate-slideDown">
-          <div className="flex items-start space-x-3.5">
-            <div className="w-10 h-10 rounded-2xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-sm">
-              <Bell className="w-5 h-5 animate-bounce" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="font-bold text-sm text-purple-900">
-                  {latestAssignment.teacherName} vừa giao cho em nhiệm vụ mới!
-                </span>
-                <span className="text-[10px] bg-purple-200 text-purple-800 font-bold px-2 py-0.5 rounded-full">
-                  {latestAssignment.targetClass}
-                </span>
-              </div>
-              <p className="text-xs sm:text-sm text-purple-800 mt-0.5">
-                Nhiệm vụ: <span className="font-bold">{latestAssignment.lessonTitle}</span> ({latestAssignment.type === 'practice' ? 'Luyện tập' : 'Tình huống'} • {latestAssignment.questionCount} câu) — Hạn nộp: <span className="font-semibold text-rose-600">{latestAssignment.dueDate}</span>
-              </p>
-            </div>
-          </div>
-          <button
-            onClick={() => {
-              playClickSound();
-              onNavigate(latestAssignment.type === 'situation' ? 'situations' : 'practice', latestAssignment.lessonId);
-            }}
-            className="shrink-0 bg-purple-600 hover:bg-purple-700 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center space-x-1.5 active:scale-95"
-          >
-            <span>Làm bài ngay</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
-      )}
-
-      {/* KHU VỰC 2: TIẾP TỤC HỌC */}
-      <section className="bg-white rounded-3xl border-2 border-slate-100 p-6 sm:p-7 shadow-sm hover:border-amber-200 transition-all">
+      {/* KHU VỰC 2: BÀI TẬP ĐANG THỰC HIỆN */}
+      <section className="bg-white rounded-3xl border-2 border-slate-100 p-6 sm:p-7 shadow-sm hover:border-indigo-200 transition-all">
         <div className="flex items-center justify-between mb-4">
-          <span className="text-xs font-extrabold uppercase tracking-wider text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-            Tiếp tục học
+          <span className="text-xs font-extrabold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200">
+            Bài tập đang làm
           </span>
           <span className="text-xs font-semibold text-slate-600">
-            Bài gần nhất của em
+            Bài tập gần nhất của em
           </span>
         </div>
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-5">
           <div className="flex items-center space-x-4">
-            <div className="w-14 h-14 rounded-2xl bg-amber-100 text-3xl flex items-center justify-center border border-amber-200 shadow-inner">
+            <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-3xl flex items-center justify-center border border-indigo-200 shadow-inner">
               {lastActiveLesson.icon}
             </div>
             <div>
@@ -134,59 +100,61 @@ export default function HomeView({
           <button
             onClick={() => {
               playClickSound();
-              onNavigate('lessons', lastActiveLesson.id);
+              onNavigate('homework', lastActiveLesson.id);
             }}
-            className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-sm sm:text-base px-6 py-3 rounded-2xl shadow-md shadow-orange-200 hover:shadow-lg active:scale-95 transition-all"
+            className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-sm sm:text-base px-6 py-3 rounded-2xl shadow-md shadow-indigo-200 hover:shadow-lg active:scale-95 transition-all"
           >
-            <span>TIẾP TỤC HỌC</span>
+            <span>LÀM BÀI TẬP Ở NHÀ</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </section>
 
-      {/* KHU VỰC 3: 3 NÚT LỚN */}
+      {/* BANNER PHIẾU HỌC TẬP TƯƠNG TÁC BÀI 1 */}
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-600 via-orange-600 to-rose-600 text-white p-6 sm:p-7 shadow-lg shadow-orange-100/50 flex flex-col md:flex-row md:items-center justify-between gap-5 border border-orange-400/30">
+        <div className="space-y-2 relative z-10 max-w-2xl">
+          <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-black text-amber-200 border border-white/20">
+            <Sparkles className="w-3.5 h-3.5 text-yellow-300 animate-spin" />
+            <span>ĐẶC BIỆT • BÀI 1: TỰ HÀO VỀ TRUYỀN THỐNG GIA ĐÌNH, DÒNG HỌ</span>
+          </div>
+          <h2 className="text-xl sm:text-2xl font-black tracking-tight text-white">
+            🏡 Phiếu Học Tập Tương Tác: "Giải Mã Kho Báu Gia Đình"
+          </h2>
+          <p className="text-xs sm:text-sm text-amber-100 leading-relaxed">
+            Hành trình 5 chặng với 12 màn thử thách tương tác 3D: Cánh cửa gia đình → Giải mã truyền thống → Hiểu giá trị → Chọn hành động → Mở khóa kho báu & Cam kết 7 ngày!
+          </p>
+        </div>
+
+        <button
+          onClick={() => {
+            playClickSound();
+            onNavigate('homework', 1);
+          }}
+          className="relative z-10 shrink-0 inline-flex items-center justify-center space-x-2 bg-white hover:bg-amber-50 text-orange-600 hover:text-orange-700 font-black text-sm px-6 py-3.5 rounded-2xl shadow-md active:scale-95 transition-all"
+        >
+          <span>THAM GIA GIẢI MÃ (+30 ⭐)</span>
+          <ArrowRight className="w-4 h-4" />
+        </button>
+
+        {/* Decorative emoticons */}
+        <div className="absolute -right-2 -bottom-4 text-7xl opacity-15 select-none pointer-events-none">
+          🏆
+        </div>
+      </section>
+
+      {/* KHU VỰC 3: 3 KHỐI BÀI TẬP Ở NHÀ */}
       <section className="space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="text-lg sm:text-xl font-black text-slate-800 tracking-tight flex items-center space-x-2">
-            <span>3 Bước Học Tập Cốt Lõi</span>
+            <span>3 Dạng Bài Tập Ở Nhà Cốt Lõi</span>
           </h2>
           <span className="text-xs font-semibold text-slate-600">
-            Khám phá kiến thức toàn diện
+            Rèn luyện kỹ năng và kiến thức
           </span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-          {/* NÚT 1: HỌC BÀI */}
-          <button
-            onClick={() => {
-              playClickSound();
-              onNavigate('lessons');
-            }}
-            className="group relative overflow-hidden bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-6 sm:p-7 rounded-3xl shadow-lg shadow-blue-100 hover:shadow-xl hover:shadow-blue-200 hover:-translate-y-1 active:translate-y-0 transition-all text-left flex flex-col justify-between min-h-[170px]"
-          >
-            <div className="flex items-center justify-between">
-              <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform">
-                📖
-              </div>
-              <span className="text-xs font-bold bg-white/20 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                Bước 1
-              </span>
-            </div>
-            <div>
-              <h3 className="text-xl sm:text-2xl font-black mb-1">
-                HỌC BÀI
-              </h3>
-              <p className="text-xs sm:text-sm text-blue-100 leading-snug">
-                10 bài chuẩn GDCD 6 • Sơ đồ tư duy & Ghi nhớ
-              </p>
-            </div>
-            <div className="flex items-center text-xs font-bold text-blue-100 group-hover:text-white mt-3 pt-2 border-t border-white/15">
-              <span>Bắt đầu học</span>
-              <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </button>
-
-          {/* NÚT 2: LUYỆN TẬP */}
+          {/* NÚT 1: LUYỆN TẬP TRẮC NGHIỆM */}
           <button
             onClick={() => {
               playClickSound();
@@ -199,24 +167,24 @@ export default function HomeView({
                 ✍️
               </div>
               <span className="text-xs font-bold bg-white/20 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                Bước 2
+                Dạng 1
               </span>
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl font-black mb-1">
-                LUYỆN TẬP
+                TRẮC NGHIỆM
               </h3>
               <p className="text-xs sm:text-sm text-emerald-100 leading-snug">
-                Trắc nghiệm ABCD • Đúng - Sai • Phản xạ nhanh
+                Trắc nghiệm ABCD • Đúng - Sai • Tự chấm điểm & giải thích
               </p>
             </div>
             <div className="flex items-center text-xs font-bold text-emerald-100 group-hover:text-white mt-3 pt-2 border-t border-white/15">
-              <span>Luyện tập ngay</span>
+              <span>Làm bài ngay</span>
               <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </button>
 
-          {/* NÚT 3: TÌNH HUỐNG */}
+          {/* NÚT 2: TÌNH HUỐNG */}
           <button
             onClick={() => {
               playClickSound();
@@ -229,7 +197,7 @@ export default function HomeView({
                 💡
               </div>
               <span className="text-xs font-bold bg-white/20 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                Bước 3
+                Dạng 2
               </span>
             </div>
             <div>
@@ -237,11 +205,41 @@ export default function HomeView({
                 TÌNH HUỐNG
               </h3>
               <p className="text-xs sm:text-sm text-purple-100 leading-snug">
-                "Em sẽ làm gì?" • Xử lý khéo léo đời sống thực tế
+                "Em sẽ làm gì?" • Phân tích hành vi & ứng xử khéo léo
               </p>
             </div>
             <div className="flex items-center text-xs font-bold text-purple-100 group-hover:text-white mt-3 pt-2 border-t border-white/15">
               <span>Giải quyết tình huống</span>
+              <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </button>
+
+          {/* NÚT 3: VẬN DỤNG & THỰC HÀNH */}
+          <button
+            onClick={() => {
+              playClickSound();
+              onNavigate('apply');
+            }}
+            className="group relative overflow-hidden bg-gradient-to-br from-rose-500 to-orange-500 text-white p-6 sm:p-7 rounded-3xl shadow-lg shadow-rose-100 hover:shadow-xl hover:shadow-rose-200 hover:-translate-y-1 active:translate-y-0 transition-all text-left flex flex-col justify-between min-h-[170px]"
+          >
+            <div className="flex items-center justify-between">
+              <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform">
+                🚀
+              </div>
+              <span className="text-xs font-bold bg-white/20 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                Dạng 3
+              </span>
+            </div>
+            <div>
+              <h3 className="text-xl sm:text-2xl font-black mb-1">
+                VẬN DỤNG
+              </h3>
+              <p className="text-xs sm:text-sm text-rose-100 leading-snug">
+                Góc suy ngẫm • Kế hoạch 7 ngày • Dự án sáng tạo
+              </p>
+            </div>
+            <div className="flex items-center text-xs font-bold text-rose-100 group-hover:text-white mt-3 pt-2 border-t border-white/15">
+              <span>Thực hành ngay</span>
               <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </button>

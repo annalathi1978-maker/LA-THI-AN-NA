@@ -28,7 +28,7 @@ export default function StudentRegisterModal({
   
   const [mode, setMode] = useState<'view' | 'register' | 'edit'>(isAlreadyRegistered ? 'view' : 'register');
   const [name, setName] = useState(progress.studentName || '');
-  const [selectedClass, setSelectedClass] = useState(progress.studentClass || '7A1');
+  const [selectedClass, setSelectedClass] = useState(progress.studentClass || '6A8');
   const [customClass, setCustomClass] = useState('');
   const [selectedAvatar, setSelectedAvatar] = useState('👦');
   const [errorMsg, setErrorMsg] = useState('');
@@ -36,7 +36,7 @@ export default function StudentRegisterModal({
 
   if (!isOpen) return null;
 
-  const currentClass = selectedClass === 'other' ? (customClass || '7A1') : selectedClass;
+  const currentClass = selectedClass === 'other' ? (customClass.trim() || '6A8') : selectedClass;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,12 +47,12 @@ export default function StudentRegisterModal({
       return;
     }
 
-    if (cleanName.length < 2) {
-      setErrorMsg('Họ và tên cần có ít nhất 2 ký tự.');
+    if (cleanName.length < 3) {
+      setErrorMsg('Họ và tên cần có ít nhất 3 ký tự (Ví dụ: Nguyễn Văn An).');
       return;
     }
 
-    const classNameToSave = selectedClass === 'other' ? (customClass.trim() || '7A1') : selectedClass;
+    const classNameToSave = selectedClass === 'other' ? (customClass.trim() || '6A8') : selectedClass;
 
     setErrorMsg('');
     if (mode === 'edit') {
@@ -66,7 +66,7 @@ export default function StudentRegisterModal({
       setShowSuccessToast(true);
       setTimeout(() => setShowSuccessToast(false), 4000);
     } else {
-      // First-time registration
+      // First-time registration (1-time registration)
       onRegisterStudent({
         name: cleanName,
         className: classNameToSave,
@@ -75,7 +75,7 @@ export default function StudentRegisterModal({
       playCorrectSound();
       playFanfareSound();
       confetti({
-        particleCount: 80,
+        particleCount: 90,
         spread: 70,
         origin: { y: 0.6 }
       });
@@ -88,7 +88,7 @@ export default function StudentRegisterModal({
   const handleStartEdit = () => {
     playClickSound();
     setName(progress.studentName || '');
-    setSelectedClass(SUPPORTED_CLASSES.includes(progress.studentClass || '') ? (progress.studentClass || '7A1') : 'other');
+    setSelectedClass(SUPPORTED_CLASSES.includes(progress.studentClass || '') ? (progress.studentClass || '6A8') : 'other');
     if (!SUPPORTED_CLASSES.includes(progress.studentClass || '')) {
       setCustomClass(progress.studentClass || '');
     }
@@ -166,10 +166,10 @@ export default function StudentRegisterModal({
                       {progress.studentName}
                     </p>
                     <p className="text-xs font-semibold text-indigo-200">
-                      Lớp: <span className="text-yellow-300 font-bold">{progress.studentClass}</span> • Mã HS: <span className="font-mono text-cyan-300">{progress.studentIdCode || generateStudentCode(progress.studentClass || '7A1', 1)}</span>
+                      Lớp: <span className="text-yellow-300 font-bold">{progress.studentClass}</span> • Mã HS: <span className="font-mono text-cyan-300">{progress.studentIdCode || generateStudentCode(progress.studentClass || '6A8', 1)}</span>
                     </p>
                     <p className="text-[11px] text-slate-400">
-                      Ngày đăng ký: {progress.registrationDate || '2026-08-25'}
+                      Ngày đăng ký: {progress.registrationDate || '2026-09-15'}
                     </p>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function StudentRegisterModal({
                 <div className="grid grid-cols-3 gap-2 mt-5 pt-4 border-t border-indigo-800/60 text-center">
                   <div className="bg-white/5 p-2 rounded-xl border border-white/10">
                     <p className="text-[10px] text-indigo-300">Đã học</p>
-                    <p className="font-black text-sm text-yellow-300">{progress.completedLessons.length}/10 bài</p>
+                    <p className="font-black text-sm text-yellow-300">{progress.completedLessons.length}/12 bài</p>
                   </div>
                   <div className="bg-white/5 p-2 rounded-xl border border-white/10">
                     <p className="text-[10px] text-indigo-300">Tình huống</p>
@@ -261,10 +261,10 @@ export default function StudentRegisterModal({
                 />
               </div>
 
-              {/* Lớp: 7A1 đến 7A5 */}
+              {/* Lớp: 6A8 đến 6A12 */}
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                  Lớp học (Khối 7 - THCS Tân Hải) <span className="text-rose-500">*</span>:
+                  Lớp học (6A8, 6A9, 6A10, 6A11, 6A12 - THCS Tân Hải) <span className="text-rose-500">*</span>:
                 </label>
                 <div className="grid grid-cols-5 gap-2">
                   {SUPPORTED_CLASSES.map((cls) => (
@@ -275,7 +275,7 @@ export default function StudentRegisterModal({
                         playClickSound();
                         setSelectedClass(cls);
                       }}
-                      className={`py-2.5 rounded-xl font-black text-xs transition-all border ${
+                      className={`py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all border ${
                         selectedClass === cls
                           ? 'bg-blue-600 text-white border-blue-600 shadow-md scale-105'
                           : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
@@ -292,11 +292,11 @@ export default function StudentRegisterModal({
                     type="checkbox"
                     id="customClassCheck"
                     checked={selectedClass === 'other'}
-                    onChange={(e) => setSelectedClass(e.target.checked ? 'other' : '7A1')}
+                    onChange={(e) => setSelectedClass(e.target.checked ? 'other' : '6A8')}
                     className="rounded text-blue-600 focus:ring-blue-500"
                   />
                   <label htmlFor="customClassCheck" className="text-xs text-slate-600 font-medium cursor-pointer">
-                    Nhập lớp khác (nếu không thuộc 7A1 - 7A5)
+                    Nhập lớp khác (nếu không thuộc 6A8 - 6A12)
                   </label>
                 </div>
 
@@ -305,7 +305,7 @@ export default function StudentRegisterModal({
                     type="text"
                     value={customClass}
                     onChange={(e) => setCustomClass(e.target.value)}
-                    placeholder="VD: 7A6, 6A1..."
+                    placeholder="VD: 6A1, 6A2..."
                     className="w-full mt-2 bg-slate-50 text-slate-900 text-xs p-2.5 rounded-xl border border-slate-300"
                   />
                 )}
